@@ -5,6 +5,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 :root{
     --fonte1: 'Raleway', sans-serif; 
     --coramarelo: #F2CB05;
@@ -24,6 +27,8 @@ nav#menu{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    background-color: var(--coramarelo);
 }
 nav > a{
     padding: 5px;
@@ -81,16 +86,14 @@ div.container{
     display: flex;
     text-align: center;
     justify-content: space-between;
-    position: absolute;
 }
 div#titulos{
     flex-direction: column;
     gap: 30px;
     display: flex;
     align-items: center;
-    position: relative;
-    left: 150px;
-    top: 150px;
+    margin-top: 150px;
+    margin-left: 150px;
 }
 div#titulos > h1{
     font-weight: bold;
@@ -101,9 +104,8 @@ div#titulos > h2{
 img#relogio{
     height: 300px;
     width: 300px;
-    position: relative;
-    right: 300px;
-    top: 100px;
+    margin-top: 100px;
+    margin-right: 300px;
 }
 button#comprar{
     background-color: var(--corbotao);
@@ -153,8 +155,8 @@ section#specs{
     font-family: var(--fonte1);
     margin-top: 5px;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-items: center;
     gap: 10px;
@@ -185,6 +187,8 @@ section#specs > aside > div.bloco{
     border: 1px solid black;
     box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.25);
     border-radius: 66px;
+    flex-wrap: wrap;
+    flex: 1 1 300px;
 }
 aside#quadradspecs{
     width: 100%;
