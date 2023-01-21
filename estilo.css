@@ -17,14 +17,16 @@ html{
 /*Cabeçalho*/
 
 header{
+    display: flex;
+    justify-content: space-between;
     height: 140px;
     background-color: var(--coramarelo);
     font-family: var(--fonte1);
     font-weight: 500;
 }
-nav#menu{
-    width: 100%;
+header > nav#menu{
     display: flex;
+    width: 100%;
     justify-content: space-between;
     position: fixed;
     background-color: var(--coramarelo);
@@ -34,7 +36,6 @@ nav > a{
     margin-left: 50px;
 }
 nav > ul > a{
-    position: relative;
     text-decoration: none;
     color: black;
     margin: 10px;
@@ -76,14 +77,29 @@ li{
 
 main{
     background-image: linear-gradient(to bottom, var(--coramarelo), #fff);
-
     height: 500px;
     font-family: var(--fonte1);
+}
+@media(max-width:1240px){
+    main{
+        height: 700px;
+    }
+    main > div.container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main > div.container > div#relogio{
+        position: relative;
+        left: 50px;
+        top: 20px;
+    }
 }
 div.container{
     display: flex;
     text-align: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 div#titulos{
     flex-direction: column;
@@ -99,11 +115,11 @@ div#titulos > h1{
 div#titulos > h2{
     font-weight: 400;
 }
-img#relogio{
-    height: 300px;
-    width: 300px;
-    margin-top: 100px;
-    margin-right: 300px;
+div#relogio{
+    height: 320px;
+    width: 310px;
+    background-image: url(imagens/foto-removebg-preview.png);
+    background-size: cover;
 }
 button#comprar{
     background-color: var(--corbotao);
@@ -168,9 +184,15 @@ section#specs > p{
     padding: 10px;
     font-size: 24px;
 }
-section#specs > aside{
+section#specs > aside#quadradspecs{
     display: flex;
-    gap: 10px;
+}
+@media(max-width:1240px){
+    section#specs > aside{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 section#specs > aside > div.bloco{
     display: flex;
@@ -183,10 +205,6 @@ section#specs > aside > div.bloco{
     border: 1px solid black;
     box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.25);
     border-radius: 66px;
-}
-aside#quadradspecs{
-    display: flex;
-    justify-content: space-around;
 }
 section#specs > aside > div.bloco > img{
     height: 130px;
@@ -217,7 +235,6 @@ section#specs > #funçoes:hover{
     transition: linear 200ms;
 }
 aside#imagens > div.fotos{
-    
     height: 800px;
     display: flex;
     flex-direction: column;
