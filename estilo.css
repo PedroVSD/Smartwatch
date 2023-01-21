@@ -81,7 +81,6 @@ main{
     font-family: var(--fonte1);
 }
 div.container{
-    width: 100vw;
     display: flex;
     text-align: center;
     justify-content: space-between;
@@ -248,7 +247,7 @@ aside#imagens > div.fotos > h2{
     font-family: var(--fonte1);
     font-weight: 600;
     font-size: 25px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 aside#imagens > div.fotos > p{
     color: white;
