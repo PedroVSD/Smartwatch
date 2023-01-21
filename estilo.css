@@ -160,6 +160,8 @@ div#relogiopreto{
     background-image: url(imagens/relogio-preto.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
